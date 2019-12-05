@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <title>{% block title %}新闻摘要{% endblock %}</title>
+        <style>
+            body {
+                margin:auto;
+                max_width: 580px;
+                font-size: 14px;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+               padding: 0;
+               overflow: hidden;
+               background-color: #333;
+            }
+
+            nav li {
+                float: left;
+            }
+
+            nav li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 8px 12px;
+                text-decoration: none;
+            }
+
+            form {
+                padding: 50px 200px;
+            }
+
+            input[type=submit] {
+                font-family: inherit;
+            }
+
+            input[type=text] {
+                border: 1px solid #ddd;
+            }
+
+            input[name=title] {
+                width: 300px;
+                height: 20px;
+            }
+
+            textarea {
+                width: 600px;
+                height: 300px;
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 3px 5px;
+                text-decoration: none;
+                cursor: pointer;
+                background-color: white;
+                color: black;
+                border: 1px solid #555555;
+                border-radius: px;
+            }
+
+            .summary-list {
+                list-style-type: none;
+                padding: 0px 30px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            }
+
+            .summary-list li {
+                padding: 20px 100px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            footer {
+                color: #888;
+                margin-top: 15px;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    {% endblock %}
+</head>
+<body>
+<nav>
+    <ul><li><a href="{{ url_for('getdata')}}">回到主页</a> </li></ul>
+</nav>
+<main>
+    {% block content %} {% endblock %}
+</main>
+<footer>
+    {% block footer %}
+        <small>&copy;2019 开课吧Project1 By蒋晓天</small>
+    {% endblock %}
+</footer>
+{% block scripts %}{% endblock %}
+</body>
+</html>

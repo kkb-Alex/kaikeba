@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 style="padding: 0px 200px;">输入新闻标题和内容</h1>
+    <form method="post">
+        <label for="title">标题</label><br>
+        <input type="text" name="title" autocomplete="off" required><br>
+        <label for="content">内容</label><br>
+        <textarea name="content" autocomplete="off" required></textarea><br>
+        <input class="btn" type="submit" name="Submit" value="获得摘要">
+    </form>
+{% endblock %}
